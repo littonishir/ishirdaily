@@ -38,13 +38,11 @@ public class Main2Activity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 1);
         adapter = new NumListAdapter(this, list);
         recyclerView.setLayoutManager(gridLayoutManager);
-
 //        WrapperRecycleAdapter wrapperRecycleAdapter = new WrapperRecycleAdapter(adapter);
 //        View inflate = View.inflate(this, R.layout.item_num, recyclerView);
-        View headerview = LayoutInflater.from(this).inflate(R.layout.rv_heder,recyclerView,false);
-        View footview = LayoutInflater.from(this).inflate(R.layout.item_num,recyclerView,false);
+        View headerview = LayoutInflater.from(this).inflate(R.layout.rv_heder, recyclerView, false);
+        View footview = LayoutInflater.from(this).inflate(R.layout.item_num, recyclerView, false);
         recyclerView.setAdapter(adapter);
-
         recyclerView.addHeaderView(headerview);
         recyclerView.addFootView(footview);
 

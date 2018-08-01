@@ -17,8 +17,10 @@ public class QuickAdapter extends BaseQuickAdapter<Model, BaseViewHolder> {
 
     @Override
     protected void convert(BaseViewHolder helper, Model item) {
-//可链式调用赋值
-        helper.setText(R.id.tv_title, item.title).addOnClickListener(R.id.tv_title)
-                .setText(R.id.tv_content, item.content).addOnClickListener(R.id.tv_content);
+        //可链式调用赋值
+        helper.setText(R.id.tv_title, item.title)
+                .addOnClickListener(R.id.tv_title)
+                .setText(R.id.tv_content, item.content)
+                .addOnClickListener(R.id.tv_content);
     }
 }
