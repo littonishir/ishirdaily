@@ -1,4 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-noarg'
+apply plugin: 'kotlin-allopen'
+
 
 android {
     compileSdkVersion 27
@@ -20,6 +24,14 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+
+    noArg {
+        annotation("com.litton.ishirdaily.bean.Poko")
+    }
+
+    allOpen {
+        annotation("com.litton.ishirdaily.bean")
+    }
 }
 
 dependencies {
@@ -33,6 +45,12 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 
 }
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'kotlin-android-extensions'
